@@ -1,6 +1,3 @@
-//http://localhost:3000/employees
-
-/*UC2-Ability to view Employee Data from JSON Server having ID, Name and Salary using AJAX */
 let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 function showTime() {
@@ -32,11 +29,11 @@ function getUserDetails(data) {
 makeAJAXCall("GET", getURL, getUserDetails);
 console.log(" Made GET AJAX Call to server at: " + showTime());
 
-/*const deleteURL="http://localhost:3000/employees/4";
-function userDeleted(data){
-console.log(" User Deleted  "+data)
+const deleteURL = "http://localhost:3000/employees/4";
+function userDeleted(data) {
+    console.log(" User Deleted  " + data)
 }
-makeAJAXCall ("DELETE", deleteURL, userDeleted, false);*/
+makeAJAXCall("DELETE", deleteURL, userDeleted, false);
 
 const postURL = "http://localhost:3000/employees";
 const empData = { "name": "Harry", "salary": "5000" };
